@@ -42,7 +42,7 @@ node
 
 {
 
-    agent any 
+    
 
     stages
 
