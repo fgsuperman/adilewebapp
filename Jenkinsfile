@@ -2,15 +2,11 @@ pipeline
 
 {
 
-  agent 
+  
 
-  { 
+   agent none
 
-    docker { image 'maven:3.8.4-jdk-11'  } 
-
-  }
-
-           
+   
 
    stages 
 
@@ -19,6 +15,14 @@ pipeline
      stage('Build') 
 
      {
+
+       agent 
+
+       { 
+
+         docker { image 'maven:3.8.4-jdk-11'  } 
+
+       }
 
        steps 
 
@@ -34,23 +38,14 @@ pipeline
 
       }
 
-    }
+    
 
-}
-
-node
-
-{
-
-    agent any 
-
-    stages
-
-    {
 
       stage('Generer image docker')
 
       {
+
+        agent any
 
         steps
 
@@ -68,8 +63,13 @@ node
 
       }
 
-    
+      
 
     }
 
+    
+
+    
+
 }
+
