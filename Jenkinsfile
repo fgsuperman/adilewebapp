@@ -36,16 +36,37 @@ pipeline
 
     }
 
-}
+    
 
+    agent any 
 
-node
+    stages
 
-{
-   
+    {
+
+      stage('Generer image docker')
+
+      {
+
+        steps
+
+        {
 
           echo 'Generating docker image'
 
           sh 'docker build -t adilewebapp:v1.0 .'
+
+        
+
+        }
+
+      
+
+      }
+
+    
+
+    }
+
 }
 
