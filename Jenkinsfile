@@ -88,6 +88,7 @@ pipeline
         agent any
         steps
         {
+          sh 'docker login -u adilesl -p A@d897058'
           sh 'docker tag adilewebapp:v1.0 adilesl/webapp'
           sh 'docker push adilesl/webapp'
          
