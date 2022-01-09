@@ -42,28 +42,10 @@ pipeline
 node
 
 {
-
-    stages
-
-    {
-
-      stage('Generate docker image') 
-
-      { 
-
-        steps 
-
-        {
+   
 
           echo 'Generating docker image'
 
           sh 'docker build -t adilewebapp:v1.0 .'
-
-         }
-
-       }
-
-    }
-
 }
 
