@@ -83,6 +83,17 @@ pipeline
 
       }
 
+      stage('Pusher l image dans dockerhub')
+      {
+        agent any
+        steps
+        {
+          sh 'docker tag adilewebapp:v1.0 adilesl/webapp'
+          sh 'docker push adilesl/webapp'
+         
+        }
+
+      }
       
 
     }
