@@ -59,7 +59,27 @@ pipeline
 
         }
 
+      }
+
       
+
+     stage('Lancer le conteneur dockerr')
+
+      {
+
+        agent any
+
+        steps
+
+        {
+
+          echo 'lancer le conteneur docker'
+
+          sh 'docker run -d -p 8085:8080 --name adileweb adilewebapp:v1.0'
+
+        
+
+        }
 
       }
 
