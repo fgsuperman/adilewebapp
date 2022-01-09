@@ -89,11 +89,8 @@ pipeline
         steps
         {
           withCredentials([string(credentialsId: 'dockerhubPwd', variable: 
-'dockerhubpwd')]) 
-          {       
-            sh '''        
-               docker login -u adilesl -p "$dockerhubpwd"        
-               '''
+'dockerhubpwd')])  {       
+            sh 'docker login -u adilesl -p "$dockerhubpwd"'
            }
 
           sh 'docker tag adilewebapp:v1.0 adilesl/webapp'
