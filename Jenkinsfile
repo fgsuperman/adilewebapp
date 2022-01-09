@@ -89,7 +89,7 @@ pipeline
         steps
         {
           withCredentials([string(credentialsId: 'dockerhubPwd', variable: 
-'dockerhubpwd')])  {       
+'dockerhubpwd')]){
             sh 'docker login -u adilesl -p "$dockerhubpwd"'
            }
 
