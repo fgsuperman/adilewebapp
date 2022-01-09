@@ -36,7 +36,11 @@ pipeline
 
     }
 
-    
+}
+
+node
+
+{
 
     agent any 
 
@@ -69,4 +73,3 @@ pipeline
     }
 
 }
-
